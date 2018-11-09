@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<style>
+
+
+</style>
+<body>
+<div id="app">
+    <tab-title></tab-title>
+    <caonima></caonima>
+
+
+</div>
+<script src="vue.2.3.0.js"></script>
+<script>
+    Vue.component("caonima", {
+        prop: [],
+        template: `<div>牛马</div>`
+    })
+    new Vue({
+        el: "#app",
+        components: {
+            'tab-title': {
+                props: ['info'],//接受父元素传递的参数
+                template: '<li>11</li>'
+            },
+            'tab-content': {
+                props: ["content"],
+                template: '<div>{{content}}</div>'
+            }
+        },
+    })
+</script>
+</body>
+</html>
